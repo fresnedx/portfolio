@@ -1,0 +1,9 @@
+#nomeTroca {
+  display: inline-block;
+  transition: transform 0.7s ease, opacity 0.2s ease;
+}
+
+.slide-up {
+  transform: translateY(-30px);
+  opacity: 0;
+}

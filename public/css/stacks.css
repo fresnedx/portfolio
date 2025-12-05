@@ -1,0 +1,139 @@
+#stacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 70vh;
+}
+
+.stacks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.title-stacks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-stacks h1 {
+  color: var(--gray-text);
+  font-size: 30px;
+}
+
+.line-stacks {
+  width: 120%;
+  background-color: var(--black-btn);
+  height: 3px;
+}
+
+.boxs-stacks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.box-stacks {
+  width: 100px;
+  height: 100px;
+  background-color: var(--blue-baby);
+  padding: 10px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-color: linear-gradient;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, #ffffff, #000000) 1;
+  color: var(--white);
+  font-size: 18px;
+}
+
+@media (min-width: 1440px) {
+  .title-stacks h1 {
+    font-size: 30px;
+  }
+
+  .boxs-stacks {
+    gap: 50px;
+  }
+
+  .box-stacks {
+    width: 110px;
+    height: 110px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .title-stacks h1 {
+    font-size: 26px;
+  }
+
+  .boxs-stacks {
+    gap: 40px;
+  }
+
+  .box-stacks {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .title-stacks h1 {
+    font-size: 22px;
+  }
+
+  .boxs-stacks {
+    gap: 25px;
+  }
+
+  .box-stacks {
+    width: 85px;
+    height: 85px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #stacks {
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stacks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .boxs-stacks {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    width: 100%;
+  }
+
+  .box-stacks {
+    width: 70%;
+    height: 100px;
+    font-size: 17px;
+  }
+
+  .title-stacks h1 {
+    font-size: 20px; /* diminui título para caber melhor */
+  }
+}

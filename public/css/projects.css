@@ -1,0 +1,231 @@
+#projects {
+  height: 180vh;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.title-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-projects h1 {
+  font-size: 40px;
+  color: var(--blue-text);
+}
+
+.title-projects h3 {
+  font-size: 20px;
+  color: var(--gray-text);
+}
+
+.boxs-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-left .box-projects:nth-child(1) {
+  height: 280px;
+}
+.projects-left .box-projects:nth-child(2) {
+  height: 235px;
+}
+.projects-left .box-projects:nth-child(3) {
+  height: 210px;
+}
+
+.projects-rigth .box-projects:nth-child(1) {
+  height: 260px;
+}
+.projects-rigth .box-projects:nth-child(2) {
+  height: 370px;
+}
+.projects-rigth .box-projects:nth-child(3) {
+  height: 190px;
+}
+
+.box-projects {
+  position: relative;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--black);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.box-projects:hover {
+  transform: scale(1.03);
+}
+
+.box-projects::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.box-projects:hover::after {
+  opacity: 1;
+}
+
+.project-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: var(--white);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.box-projects:hover .project-info {
+  opacity: 1;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.project-btn {
+  padding: 8px 18px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+  background: var(--blue-baby);
+  color: var(--gray-text);
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .title-projects h1 {
+    font-size: 24px;
+  }
+
+  .title-projects h3 {
+    font-size: 16px;
+  }
+
+  .boxs-projects {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .box-projects {
+    max-width: 170px;
+    border-radius: 6px;
+    border: 3px solid var(--black);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .projects-left .box-projects:nth-child(1) {
+    height: 200px;
+  }
+  .projects-left .box-projects:nth-child(2) {
+    height: 235px;
+  }
+  .projects-left .box-projects:nth-child(3) {
+    height: 210px;
+  }
+
+  .projects-rigth .box-projects:nth-child(1) {
+    height: 190px;
+  }
+  .projects-rigth .box-projects:nth-child(2) {
+    height: 280px;
+  }
+  .projects-rigth .box-projects:nth-child(3) {
+    height: 190px;
+  }
+
+  .box-projects:hover {
+    transform: scale(1.03);
+  }
+
+  .box-projects::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .box-projects:hover::after {
+    opacity: 1;
+  }
+
+  .project-info {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: var(--white);
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .box-projects:hover .project-info {
+    opacity: 1;
+  }
+
+  .project-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .project-btn {
+    padding: 6px 14px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .project-btn:hover {
+    background: var(--blue-baby);
+    color: var(--gray-text);
+    border: none;
+  }
+}
